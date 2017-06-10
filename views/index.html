@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular Intro</title>
+  <script src="vendors/angular.min.js" charset="utf-8"></script>
+  <script src="scripts/client.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body ng-app='myApp'>
+  <h1>Angular Activity 1</h1>
+  <div ng-controller='AngularIntro as ai'>
+    <form id="" action="index.html" method="post">
+
+    </form>
+    <p>
+      <label for="firstname">First Name</label>
+      <input type="text" ng-model='ai.firstInput' />
+    </p>
+    <p>
+      <label for="lastname">Last Name</label>
+      <input type="text" ng-model='ai.lastInput' />
+    </p>
+    <p>
+      <label for="idnumber">ID Number</label>
+      <input type="number" label='ID Number' ng-model='ai.idInput' />
+    </p>
+    <p>
+      <label for="jobtitle">Job Title</label>
+      <input type="text" label='Job Title' ng-model='ai.jobInput' />
+    </p>
+    <p>
+      <label for="annualsalary">Annual Salary</label>
+      <input type="number" label='Annual Salary' ng-model='ai.salInput' />
+    </p>
+
+    <button ng-click="ai.testClick()">Submit</button>
+
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>ID Number</th>
+        <th>Job Title</th>
+        <th>Annual Salary</th>
+      </tr>
+      <tr ng-repeat='employees in ai.employeeInfo'>
+        <td>{{employees.firstname}}</td>
+        <td>{{employees.lastname}}</td>
+        <td>{{employees.idnumber}}</td>
+        <td>{{employees.jobtitle}}</td>
+        <td>{{employees.annualsalary}}</td>
+      </tr>
+    </table>
+
+    <p ng-model='expenditures'>Monthly Expenditures:{{ ai.monthlyExpenditures }}</p>
+
+
+  </div>
+
+
+</body>
+
+</html>
