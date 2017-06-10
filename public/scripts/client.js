@@ -21,9 +21,7 @@ myApp.controller('AngularIntro', function() {
       sum += vm.employeeInfo[i].annualsalary
     }
     vm.monthlyExpenditures = (sum / 12).toFixed(2);
-
   }
-
 
   vm.testClick = function() {
     if (vm.firstInput === '' || vm.lastInput === '' || vm.idInput === '' || vm.jobInput === '' || vm.salInput === '') {
